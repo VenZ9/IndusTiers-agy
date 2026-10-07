@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusGames — Competitive Bedrock Minecraft</title>
+    <meta name="description" content="IndusGames is a competitive Bedrock Minecraft server featuring custom minigames, tier tests, and championships. Join 1000+ players.">
+    <meta property="og:title" content="IndusGames — Competitive Bedrock Minecraft">
+    <meta property="og:description" content="MCC-style competitive Minecraft. Custom minigames, tier tests, and championships.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://industiers.vercel.app">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        (function () {
+            var s = localStorage.getItem('indusgames-theme');
+            var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', s || (d ? 'dark' : 'light'));
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Floating Server Widget -->
+    <div class="server-widget" id="serverWidget" aria-label="Server connection info">
+        <span class="pulse-dot"></span>
+        <span class="widget-text">indusgames.mine.bz<span class="widget-sep">:</span>25567</span>
+        <button class="widget-copy" onclick="copyText('indusgames.mine.bz:25567', this)" aria-label="Copy server address">
+            <i class="fas fa-copy"></i>
+        </button>
+    </div>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+
+        <!-- HERO -->
+        <section id="hero" class="section section-hero">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="container hero-split">
+                <div class="hero-left">
+                    <span class="chip">Bedrock Edition &bull; Competitive</span>
+                    <h1>The Arena<br>Awaits<span class="gradient-dot">.</span></h1>
+                    <p>MCC-style competitive Minecraft server with custom minigames, tier tests, and championships — built for serious Bedrock players.</p>
+                    <div class="hero-actions">
+                        <a href="https://discord.gg/yXB3zfjewb" target="_blank" rel="noopener" class="btn btn-glow">
+                            <i class="fab fa-discord"></i> Join Discord
+                        </a>
+                        <a href="#games" class="btn btn-ghost">
+                            Explore Games <i class="fas fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="info-card">
+                        <div class="info-card-head">
+                            <img src="assets/logo.png" alt="IndusGames Logo" class="info-logo" width="48" height="48">
+                            <div>
+                                <strong>IndusGames</strong>
+                                <span class="status-live"><span class="pulse-dot-sm"></span> Online</span>
+                            </div>
+                        </div>
+                        <div class="info-rows">
+                            <div class="info-row">
+                                <span class="info-label">Server IP</span>
+                                <div class="info-val">
+                                    <code>indusgames.mine.bz</code>
+                                    <button class="copy-sm" onclick="copyText('indusgames.mine.bz', this)">Copy</button>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Port</span>
+                                <div class="info-val">
+                                    <code>25567</code>
+                                    <button class="copy-sm" onclick="copyText('25567', this)">Copy</button>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Edition</span>
+                                <span class="info-plain">Bedrock</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Platform</span>
+                                <span class="info-plain">Mobile / Console / PC</span>
+                            </div>
+                        </div>
+                        <a href="https://industiers.vercel.app" target="_blank" rel="noopener" class="info-link">
+                            View Rankings <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMES -->
+        <section id="games" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="chip">Gamemodes</span>
+                    <h2>Choose Your Battle</h2>
+                    <p>Custom-built minigames designed for competitive play.</p>
+                </div>
+                <div class="bento reveal">
+                    <article class="bento-card bento-wide">
+                        <div class="bento-icon"><i class="fas fa-crosshairs"></i></div>
+                        <div class="bento-body">
+                            <h3>FFA</h3>
+                            <p>Free-for-all combat arena. Drop in, fight, survive. Every player for themselves in a chaotic battleground.</p>
+                        </div>
+                        <span class="badge badge-live">Active</span>
+                    </article>
+                    <article class="bento-card">
+                        <div class="bento-icon"><i class="fas fa-khanda"></i></div>
+                        <h3>Duels</h3>
+                        <p>Challenge rivals in intense 1v1 combat scenarios.</p>
+                        <span class="badge badge-live">Active</span>
+                    </article>
+                    <article class="bento-card">
+                        <div class="bento-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Bedfight</h3>
+                        <p>Fast-paced bed defense and attack battles.</p>
+                        <span class="badge badge-live">Active</span>
+                    </article>
+                    <article class="bento-card">
+                        <div class="bento-icon"><i class="fas fa-bed"></i></div>
+                        <h3>Bedwars</h3>
+                        <p>Protect your bed, destroy others, and dominate.</p>
+                        <span class="badge badge-soon">Coming Soon</span>
+                    </article>
+                    <article class="bento-card">
+                        <div class="bento-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Skywars</h3>
+                        <p>Fight and survive on floating islands above the void.</p>
+                        <span class="badge badge-soon">Coming Soon</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section id="community" class="section section-alt">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="chip">Community</span>
+                    <h2>Join the Movement</h2>
+                    <p>Connect with players, compete in events, and climb the ranks.</p>
+                </div>
+                <div class="stats-row reveal">
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span class="stat-num" data-target="1000">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <span class="stat-label">Discord Members</span>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <span class="stat-label">Gamemodes</span>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span class="stat-num" data-target="24">0</span><span class="stat-static">/7</span>
+                        </div>
+                        <span class="stat-label">Community</span>
+                    </div>
+                </div>
+                <div class="community-cta reveal">
+                    <p>Partnerships and collaborations are open. Come say hi.</p>
+                    <a href="https://discord.gg/yXB3zfjewb" target="_blank" rel="noopener" class="btn btn-discord">
+                        <i class="fab fa-discord"></i> Join Discord Server
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RULES -->
+        <section id="rules" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="chip">Indus Championship</span>
+                    <h2>Official Rules</h2>
+                    <p>Fair play, respect, and competition. Read them, follow them, and you'll fit right in.</p>
+                </div>
+
+                <div class="accordion reveal" role="list">
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <div class="acc-icon"><i class="fas fa-scale-balanced"></i></div>
+                            <span>General Rules</span>
+                            <i class="fas fa-chevron-down acc-chevron"></i>
+                        </button>
+                        <div class="accordion-panel" role="region">
+                            <ul>
+                                <li>Treat every player and staff member with basic respect.</li>
+                                <li>Hate speech, racism, toxicity, and personal attacks have zero place here.</li>
+                                <li>Keep the chat clean — no spamming, no pointless drama.</li>
+                                <li>Use the correct channels for what you're posting.</li>
+                                <li>Discord's <a href="https://discord.com/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Community Guidelines</a> apply on top of ours.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <div class="acc-icon"><i class="fas fa-gamepad"></i></div>
+                            <span>Gameplay Rules</span>
+                            <i class="fas fa-chevron-down acc-chevron"></i>
+                        </button>
+                        <div class="accordion-panel" role="region">
+                            <ul>
+                                <li>Play legit. Hacking, cheating, or unfair mods get you removed fast.</li>
+                                <li>Glitches and bugs aren't features — don't exploit them.</li>
+                                <li>Solo modes mean solo. No secret teaming.</li>
+                                <li>Protected areas are protected. Griefing won't be tolerated.</li>
+                                <li>PvP happens in designated zones unless an event says otherwise.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <div class="acc-icon"><i class="fas fa-user-shield"></i></div>
+                            <span>Staff &amp; Authority</span>
+                            <i class="fas fa-chevron-down acc-chevron"></i>
+                        </button>
+                        <div class="accordion-panel" role="region">
+                            <ul>
+                                <li>Staff calls are final. Respect them.</li>
+                                <li>Got an issue? Open a ticket — don't start a public argument.</li>
+                                <li>Staff abuse gets reported with proof. We take it seriously.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <div class="acc-icon"><i class="fas fa-trophy"></i></div>
+                            <span>Events &amp; Competitive</span>
+                            <i class="fas fa-chevron-down acc-chevron"></i>
+                        </button>
+                        <div class="accordion-panel" role="region">
+                            <ul>
+                                <li>Every event drops its own ruleset. Read it, follow it.</li>
+                                <li>No under-the-table advantages during tournaments.</li>
+                                <li>Disconnections follow official server policy — no re-dos, no exceptions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Punishments -->
+                <div class="punishments reveal">
+                    <div class="pun-header">
+                        <div class="pun-icon"><i class="fas fa-gavel"></i></div>
+                        <div>
+                            <h3>Punishments</h3>
+                            <p>Severity decides the response. We don't do warnings for the obvious stuff.</p>
+                        </div>
+                    </div>
+                    <div class="pun-track">
+                        <div class="pun-step">
+                            <span class="pun-num">1</span>
+                            <span class="pun-label">Warning</span>
+                        </div>
+                        <div class="pun-line" aria-hidden="true"></div>
+                        <div class="pun-step">
+                            <span class="pun-num">2</span>
+                            <span class="pun-label">Temp Mute</span>
+                        </div>
+                        <div class="pun-line" aria-hidden="true"></div>
+                        <div class="pun-step">
+                            <span class="pun-num">3</span>
+                            <span class="pun-label">Temp Ban</span>
+                        </div>
+                        <div class="pun-line" aria-hidden="true"></div>
+                        <div class="pun-step pun-step-final">
+                            <span class="pun-num">4</span>
+                            <span class="pun-label">Perm Ban</span>
+                        </div>
+                    </div>
+                    <div class="pun-warning">
+                        <i class="fas fa-triangle-exclamation"></i>
+                        <span>Serious violations skip straight to a permanent ban. No warning required.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>IndusGames</h3>
+                <p>A competitive Bedrock Minecraft server. Custom minigames, tier tests, and a growing community.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <a href="#hero">Home</a>
+                <a href="#games">Games</a>
+                <a href="#rules">Rules</a>
+                <a href="https://industiers.vercel.app" target="_blank" rel="noopener">IndusTiers</a>
+            </div>
+            <div class="footer-col">
+                <h4>Server</h4>
+                <span>IP: indusgames.mine.bz</span>
+                <span>Port: 25567</span>
+                <span>Bedrock Edition</span>
+            </div>
+            <div class="footer-col">
+                <h4>Community</h4>
+                <a href="https://discord.gg/yXB3zfjewb" target="_blank" rel="noopener">Discord Server</a>
+                <a href="https://industiers.vercel.app/ranking" target="_blank" rel="noopener">Rankings</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IndusGames. All rights reserved. Not affiliated with Mojang AB.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING DOCK NAVIGATION -->
+    <nav class="dock" id="dock" role="navigation" aria-label="Main navigation">
+        <a href="#hero" class="dock-btn active" data-section="hero" aria-label="Home">
+            <i class="fas fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#games" class="dock-btn" data-section="games" aria-label="Games">
+            <i class="fas fa-gamepad"></i>
+            <span>Games</span>
+        </a>
+        <a href="#community" class="dock-btn" data-section="community" aria-label="Community">
+            <i class="fas fa-users"></i>
+            <span>Community</span>
+        </a>
+        <a href="#rules" class="dock-btn" data-section="rules" aria-label="Rules">
+            <i class="fas fa-shield-halved"></i>
+            <span>Rules</span>
+        </a>
+        <button class="dock-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+            <span>Theme</span>
+        </button>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
